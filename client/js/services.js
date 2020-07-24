@@ -108,12 +108,6 @@ angular.module('starter.services', [])
         AuthenticationService.isAuthenticated = true;
         $window.sessionStorage.name     = result.data.name;
         $window.sessionStorage.is_admin = result.data.is_admin;
-
-        if (result.data.name == 'george michael' )
-        {
-          $window.sessionStorage.is_admin = true;
-        }
-
         $window.localStorage.token      = result.data.token;
         console.log(result.data);
       }).catch(function(err) {
